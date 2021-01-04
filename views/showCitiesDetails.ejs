@@ -1,0 +1,25 @@
+<h1>All City Details</h1>
+<table>
+    <tr>
+        <th>City Code</th>
+        <th>Country Code</th>
+        <th>City Name</th>
+        <th>Population</th>
+        <th>(Is) Coastal</th>
+        <th>Area (km)</th>
+
+    <% cities.forEach((city) => 
+    { %>
+        <tr> 
+            <td><%= city.cty_code %></td><br></br>
+            <td><%= city.co_code %></td>
+            <td><%= city.cty_name %></td>
+            <td><%= city.population %></td>
+            <td><%= city.isCoastal %></td>
+            <td><%= city.areaKM %></td>
+        </tr>
+    <% }) %>
+</table>
+
+    <p><a href="/">Home page</a><p>
+    <p><a href="/listcities">List cities</a><p></p>

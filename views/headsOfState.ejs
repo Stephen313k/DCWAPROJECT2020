@@ -1,0 +1,22 @@
+<h1>Heads of State</h1></br>
+
+<table>
+    <tr>
+        <th>Country Code</th>
+        <th>Head of State</th>
+<!--similar to show cities and show countries-->
+    </tr>
+    <% headOfState.forEach((document) =>
+        { %>
+    <tr>
+        <td><%=document._id %></td>
+        <td><%=document.headOfState%></td>
+
+    </tr>
+
+    <% }) %>
+</table>
+<!--basic button for navigation to the add head of state page-->
+</br></br><button><a href="/addHeadOfState">Add Heads Of State</a></button></br>
+
+</br><a href="/">Home</a>

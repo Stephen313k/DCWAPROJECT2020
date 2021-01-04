@@ -1,0 +1,24 @@
+<table>
+    <tr>
+        <th>City Code</th>
+        <th>Country Code</th>
+        <th>City Name</th>
+        <th>Population</th>
+        <th>(Is) Coastal</th>
+        <th>Area (km)</th>
+<!-- For each loops through the database and ejs is able to display the data in a table-->
+    <% cities.forEach((city) => 
+    { %>
+        <tr>
+            <td><%= city.cty_code %></td>
+            <td><%= city.co_code %></td>
+            <td><%= city.cty_name %></td>
+            <td><%= city.population %></td>
+            <td><%= city.isCoastal %></td>
+            <td><%= city.areaKM %></td>
+<!-- Button on the side to show all details for a specific country-->
+            <td><button><a href="<%= "/listcities/alldetails/" + city.cty_code %>">Show details</a></button></td>
+        </tr>
+    <% }) %>
+</table>
+<p><a href="/">Home page</a><p>
